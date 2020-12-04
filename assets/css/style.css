@@ -1,0 +1,473 @@
+ *{
+	      margin: 0;
+	      padding: 0;
+	      border: 0;
+	    
+	    }
+		body {
+			line-height: 1;
+		}
+
+		div {
+			display: block;
+		}
+
+		ol, ul {
+		list-style: none;
+		}
+		
+		::-moz-selection { 
+	    background: yellow;
+			}
+
+		::selection {
+	    background: yellow;
+		}
+
+		body, html, h1, h2, a {
+			font-family: "AkzidenzGroteskStd-Regular", sans-serif;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 1.3;
+
+		}
+		body, html, h1, div, h2, a {
+			font-size: 100%;
+		}
+
+		@media all and (max-width: 1200px) {
+	      body,
+	      html,
+	       {
+	        font-size: 18px;
+	      }
+	    }
+
+	     @media all and (max-width: 800px) {
+	      body,
+	      html,
+	      {
+	        font-size: 14px;
+	      }
+	    }
+
+		.information{
+			display: -ms-grid;
+			display: grid;
+			grid-column-gap: 2rem;
+			-ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		@media all and (max-width: 900px) {
+	      .information {
+	        min-height: 30vh;
+
+
+	      }
+	    }
+
+	     @media all and (max-width: 900px) {
+	      .information, .background, .work-info {
+	      	margin-right: 2rem;
+	      	-ms-grid-columns: 1fr;
+	        grid-template-columns: 1fr;
+	        
+	      }
+	    }
+
+	      @media all and (max-width: 900px) {
+	      .images {
+	      	-ms-grid-columns: 1fr;
+	        grid-template-columns: 1fr;
+
+	      }
+	    }
+
+
+
+		.yasemin, .work {
+			padding-left: 2rem;
+			margin-top: 1rem;
+		}
+		
+		.background {
+			margin-bottom: 1rem;
+		}
+		
+		.background h1.sub_title {
+			margin-top: 0;
+			vertical-align: baseline;
+			font: inherit;
+			border: 0;
+			margin:0;
+			padding: 0;
+			
+		}
+
+		.one, .two, .three, .four, .five, .six, .seven, .issue_two, .eight, .issue_three, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen {
+			display: none;
+		
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		/*a:hover {
+			font-style: italic;
+		}*/
+
+		img, .video {
+			width: 86vw;
+			height: auto;
+			margin-right: 2rem;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin-bottom: 2rem;
+
+		}
+		
+		.space-after{
+			margin-bottom: 0.7rem;
+		}
+		.images {
+			margin-bottom: 2rem;
+
+		}
+
+		.video {
+			width: 50vw;
+			height: 55vh;
+			display: inline-block;
+		}
+		
+		.email:hover {
+			font-weight: bold;
+			font-style: normal;
+		}
+		
+		.thumbnail {
+			width: 45vw;
+			height: auto;
+			display: inline-block;
+			
+		}
+		.triptych {
+			width: 27vw;
+			height: auto;
+			display: inline-block;
+
+		}
+
+		.illustration {
+			width: 45vw;
+			height: auto;
+			display: inline-block;
+		}
+
+		.illustration_video {
+			width: 50vw;
+			height: auto;
+			display: inline-block;
+		}
+
+		.illustration_square {
+			width: 29vw;
+			height: auto;
+			display: inline-block;
+		}
+
+		.illustration_large {
+			width: auto;
+			height: 38vh;
+			display: inline-block;
+			margin-left: 100px;
+		}
+
+		.illustration_noinline {
+			width: 30vw;
+			height: auto;
+		}
+		.threenext {
+			width: 23.4vw;
+			height: auto;
+			display: inline-block;
+			padding-top: 1rem;
+		}
+
+		.smallerfull{
+			width: 75vw;
+			height: auto;
+			display: inline-block;
+		}
+
+		.work-ten {
+			margin-bottom: 3rem;
+		}
+
+		.work {
+			margin-top: 0;
+		}
+		.more{
+			margin-top: 0;
+			/*text-indent: 1rem;*/
+		}
+		.more_two{
+			margin-top: 0;
+			margin-bottom: 1rem;
+			/*text-indent: 1rem;*/
+		}
+
+		/*.clock {
+			position: relative;
+			bottom: 5px;
+		}*/
+
+		.link_five:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+
+		.link_four:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_three:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_six:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+
+		.link_seven:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_two:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_one:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+
+		.link_eight:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_nine:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_ten:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+
+		.link_eleven:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_twelve:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.link_thirteen:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+
+		.link_fourteen:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+
+		.more:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.more_two:hover {
+			font-style: italic;
+			cursor: pointer;
+		}
+		.italic_text{
+			font-style: italic;
+		}
+
+		.underline:hover {
+			text-decoration: underline;
+		}
+
+		.indent {
+			text-indent: 1rem;
+		}
+
+		.animation:hover {
+			font-weight: bold;
+		}
+
+		.hover {
+			display: none;
+		}
+
+		h1.link_fourteen:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+		h1.link_thirteen:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+
+		h1.link_eight:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+
+		h1.link_one:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 50vw;
+			z-index: -10;
+		}
+
+			h1.link_two:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 40vw;
+			z-index: -10;
+		}
+
+		h1.link_four:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 40vw;
+			z-index: -10;
+		}
+
+		h1.link_nine:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 40vw;
+			z-index: -10;
+		}
+			h1.link_twelve:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 40vw;
+			z-index: -10;
+		}
+
+		h1.link_five:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+
+		h1.link_six:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+
+		h1.link_seven:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+
+		h1.link_eleven:hover + .hover {
+			display: inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+		h1.link_ten:hover + .hover {
+			display:inline-block;
+			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+			width: 30vw;
+			z-index: -10;
+		}
+		.inline {
+			display: inline-block;
+		}
+
+
+
+	
+
+
+ 	
+
+
+ 
+
+
+
+

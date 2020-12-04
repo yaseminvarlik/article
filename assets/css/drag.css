@@ -1,0 +1,39 @@
+/*//RESEARCH//*/
+	
+	body {
+		background: black;
+		font-size: 0;
+    	margin: 0;
+    	overflow: hidden;
+	}
+
+
+ 	#allImages {
+ 		opacity: 1;
+ 		display: block;
+ 		
+ 		cursor: move;
+ 	}
+
+    .images{
+    	
+    	width: 300px;
+ 		height: auto;
+ 		cursor: move;
+    }
+
+    #allVideos {
+        display: block;
+    }
+
+    .videos {
+        
+        width: 250px;
+        height: auto;
+        cursor: move;
+    }
+
+    div {
+    	font-size: 12pt;
+    }
+
