@@ -1,35 +1,51 @@
-var allImages = new Array("assets/img/Fiction/bingo.jpg",
-	"assets/img/Fiction/protein_bars_back.jpg",
+var allImages = new Array(
+	{ url: "assets/img/Fiction/bingo.jpg", text: "What I learned through making work constantly in an iterative cycle is that new meanings keep appearing. Every step I take, pulls me into a new direction. Opens my eyes into discovering different intentions, methods and findings. Applying methods which are so unfamiliar to me opens up new doors. Sometimes, I find myself breaking an object down to its smallest particles to analyze and reveal its complexities and hidden networks. At other times, I look at an object from a larger scope and end up in an unfamiliar space which exposes me to a wider range of perspectives. It is a loop process." },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" },
+	{ url: "assets/img/Fiction/bingo.jpg", text: "Placeholder" }
+	/*"assets/img/Fiction/protein_bars_back.jpg",
 	"assets/img/Fiction/dissect_01.jpg",
 	"assets/img/Fiction/back_barebells.jpg",
 	"assets/img/Fiction/definition.jpg",
 	"assets/img/Fiction/digital_story_board.png",
 	"assets/img/Fiction/dissect_02.jpg",
 	"assets/img/Fiction/embroidery_01.jpg",
-	"assets/img/Fiction/four_dimension.png"
+	"assets/img/Fiction/four_dimension.png"*/
 );
 
 var allVideos = new Array(
-	"assets/img/Fiction/igtv.mp4"
-
-
+	"https://player.vimeo.com/video/481775501"
 );
 
-//this is me making sure I can append an image with a loop 
-
+// Images
 for (var i = 0; i < allImages.length; i++) {
 	console.log(i);
 
+	let container = document.createElement('div')
+	container.setAttribute('class', 'hoverContainer')
+
 	let image = document.createElement('img')
-	image.setAttribute('src', allImages[i])
+	image.setAttribute('src', allImages[i].url)
 	image.setAttribute('class', 'images')
-	$("body").append(image);
+
+	let text = document.createElement('div')
+	text.textContent = allImages[i].text
+	text.setAttribute('class', 'text')
+
+	container.append(image);
+	container.append(text)
+	$('#content').append(container)
 
 	$(image).load(function () {
 		// image is loaded
 
-		var imgWidth = image.offsetWidth
-		var imgHeight = image.offsetHeight
+		var imgWidth = container.offsetWidth
+		var imgHeight = container.offsetHeight
 
 		var windowWidth = window.innerWidth;
 		var windowHeight = window.innerHeight;
@@ -42,73 +58,49 @@ for (var i = 0; i < allImages.length; i++) {
 
 		var offset = Math.floor(Math.random() * (yMax - yMin) + yMin);
 		var offsetLeft = Math.floor(Math.random() * (xMax - xMin) + xMin);
-		$(image).css("top", offset);
-		$(image).css("left", offsetLeft);
+		$(container).css("top", offset);
+		$(container).css("left", offsetLeft);
 	});
-
-
-
-
 }
 
+$(".hoverContainer").draggable();
 
-var randomLine = Math.floor(Math.random() * (allImages.length));
 
-//I have no idea why, but when I got ride of this line it got rid of my  text:
-// $(".images").append(allImages[randomLine])
-
-for (var multiplier = 0; multiplier < allImages.length; multiplier++) {
-	var result = multiplier * 6;
-
-	//I also got rid of these lines because I'm already appending the image to the body above
-	// console.log(allImages[multiplier]);
-	// $("body").append("<img class='images src="+allImages[multiplier]+">");
-
-};
-
-/*for (var i = 0; i  < allVideos.length;  i++) {
+// Video
+for (var i = 0; i < allVideos.length; i++) {
 	console.log(i);
-	$("body").append("<video class='videos' src='"+allVideos[i]+"'>");
-}*/
 
+	let video = document.createElement('iframe')
+	video.setAttribute('src', allVideos[i])
+	video.setAttribute('class', 'videos')
+	$("#content").append(video);
 
-var randomLine = Math.floor(Math.random() * (allVideos.length));
+	$(video).load(function () {
+		// image is loaded
 
-//I have no idea why, but when I got ride of this line it got rid of my  text:
-// $(".images").append(allImages[randomLine])
+		var imgWidth = video.offsetWidth
+		var imgHeight = video.offsetHeight
 
-for (var multiplier = 0; multiplier < allVideos.length; multiplier++) {
-	var result = multiplier * 6;
+		var windowWidth = window.innerWidth;
+		var windowHeight = window.innerHeight;
 
-	//I also got rid of these lines because I'm already appending the image to the body above
-	// console.log(allImages[multiplier]);
-	// $("body").append("<img class='images src="+allImages[multiplier]+">");
+		var xMin = imgHeight;
+		var xMax = windowWidth - imgWidth;
 
-};
+		var yMin = imgHeight;
+		var yMax = windowHeight - imgHeight;
 
+		var offset = Math.floor(Math.random() * (yMax - yMin) + yMin);
+		var offsetLeft = Math.floor(Math.random() * (xMax - xMin) + xMin);
+		$(video).css("top", offset);
+		$(video).css("left", offsetLeft);
+	});
+}
 
-/*$('.images').each(function(){
-	var imgWidth = $(this).offsetWidth
-	var imgHeight = $(this).offsetHeight
-
-	var windowWidth = window.innerWidth;
-	var windowHeight = window.innerHeight;
-
-	var xMin = imgHeight;
-	var xMax = windowWidth - imgWidth;
-
-	var yMin = imgHeight;
-	var yMax = windowHeight - imgHeight;
-
-	var offset = Math.floor(Math.random() * (yMax - yMin) + yMin);
-	var offsetLeft = Math.floor(Math.random() * (xMax- xMin) + xMin);
-	$(this).css("top",offset);
-	$(this).css("left",offsetLeft);
-});*/
+$(".videos").draggable();
 
 
 
-$(".images").draggable();
 
 
 
